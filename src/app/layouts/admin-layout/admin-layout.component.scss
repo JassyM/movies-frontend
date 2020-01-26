@@ -1,0 +1,19 @@
+.main-view{
+  min-height: 100vh;
+  padding: 0px;
+  position: relative;
+} 
+
+/* .container {
+  padding-top:80px
+} */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2; /* Behind the navbar */
+  padding: 0px;
+  box-shadow: 0 16px 38px -12px rgba(0,0,0,.56), 0 4px 25px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2)
+}
