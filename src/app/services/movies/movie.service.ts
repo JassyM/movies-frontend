@@ -28,11 +28,13 @@ export class MovieService {
   }
 
   public getById(id: string): Observable<Movie> {
-    return this.httpClient.get<Movie>(this.baseUrl + id, { headers: this.headers});
+    //return this.httpClient.get<Movie>(this.baseUrl + id, { headers: this.headers});
+    return this.httpClient.get<Movie>('http://www.mocky.io/v2/5e2fb45b3200006000858499');
   }
 
   public getAll(): Observable<Movie[]> {
-    return this.httpClient.get<Movie[]>(this.baseUrl, { headers: this.headers});
+    //return this.httpClient.get<Movie[]>(this.baseUrl, { headers: this.headers});
+    return this.httpClient.get<Movie[]>('http://www.mocky.io/v2/5e2fd2843200007900858532');
   }
 
   public delete(id: string): Observable<{}> {
