@@ -42,4 +42,10 @@ export class MovieShowComponent implements OnInit {
       });
   }
 
+  public onEdited(edited: boolean) {
+    if(edited){
+      this.getMovie(this.id);
+    }
+  }
+
 }

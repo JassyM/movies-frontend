@@ -24,18 +24,18 @@ export class MovieService {
   }
 
   public update(movie: Movie, id: string): Observable<Movie> {
-    //return this.httpClient.put<Movie>(this.baseUrl + id, movie, { headers: this.headers});
-    return this.httpClient.put<Movie>('http://www.mocky.io/v2/5e31561a3200004c0088844a',movie, { headers: this.headers});
+    return this.httpClient.put<Movie>(this.baseUrl + id, movie, { headers: this.headers});
+    //return this.httpClient.put<Movie>('http://www.mocky.io/v2/5e31561a3200004c0088844a',movie, { headers: this.headers});
   }
 
   public getById(id: string): Observable<Movie> {
-    //return this.httpClient.get<Movie>(this.baseUrl + id, { headers: this.headers});
-    return this.httpClient.get<Movie>('http://www.mocky.io/v2/5e2fb45b3200006000858499');
+    return this.httpClient.get<Movie>(this.baseUrl + id, { headers: this.headers});
+    //return this.httpClient.get<Movie>('http://www.mocky.io/v2/5e2fb45b3200006000858499');
   }
 
   public getAll(): Observable<Movie[]> {
-    //return this.httpClient.get<Movie[]>(this.baseUrl, { headers: this.headers});
-    return this.httpClient.get<Movie[]>('http://www.mocky.io/v2/5e2fd2843200007900858532');
+    return this.httpClient.get<Movie[]>(this.baseUrl, { headers: this.headers});
+    //return this.httpClient.get<Movie[]>('http://www.mocky.io/v2/5e2fd2843200007900858532');
   }
 
   public delete(id: string): Observable<{}> {

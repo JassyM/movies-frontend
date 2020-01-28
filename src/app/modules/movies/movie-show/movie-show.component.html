@@ -29,9 +29,9 @@
     </div>
   </div>
 </div>
-<div class="modal fade" id="editMovie" data-backdrop="static" tabindex="-1" role="dialog" 
+<div *ngIf="movie != undefined" class="modal fade" id="editMovie" data-backdrop="static" tabindex="-1" role="dialog" 
 aria-labelledby="editMovieLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
-    <app-movie-edit></app-movie-edit>
+    <app-movie-edit [idMovie]="movie.id" (edited)="onEdited($event)"></app-movie-edit>
   </div>
 </div>

@@ -55,4 +55,10 @@ export class MovieIndexComponent implements OnInit {
     
   }
 
+  public onCreated(created: boolean) {
+    if(created) {
+      this.getMovies();
+    }
+  }
+
 }
