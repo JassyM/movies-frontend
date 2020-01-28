@@ -12,7 +12,7 @@ export class MovieIndexComponent implements OnInit {
   genreList: string[] = ['Todo', 'Drama', 'Comedia', 'Acción', 'Romance', 'Horror', 
   'Fantasía', 'Ciencia Ficción', 'Suspenso', 'Aventura', 'Animación', 'Documental'];
   movies: Array<Movie>;
-  loading: boolean = false;
+  loading: boolean = true;
   test: any;
   startIndex = 0;
   endIndex = 10;
@@ -25,6 +25,7 @@ export class MovieIndexComponent implements OnInit {
   }
 
   getMovies(){
+    this.loading = true;
     this.movieService.getAll()
     .subscribe(
       res => {

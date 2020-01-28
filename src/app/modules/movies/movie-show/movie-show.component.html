@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row justify-content-md-center">
+    <h4 *ngIf="loading">
+      Cargando...
+    </h4>
+    <div class="col-md-8" *ngIf="!loading">
+      <div class="card mb-3 h-90 bg-white rounded-lg shadow text-center" *ngIf="movie != undefined; else noMovie">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="{{ movie.cover }}" class="card-img p-3" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h2 class="card-title p-4">{{ movie.name }}</h2>
+              <p class="card-text">Género: {{movie.genre}}</p>
+              <p class="card-text">Puntuación: {{movie.score}}</p>
+              <div id="buttons">
+                <a href="#" class="btn btn-outline-primary mr-1">Editar</a>
+                <a href="#" class="btn btn-outline-danger ml-1">Eliminar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ng-template #noMovie>
+        <h6>Lo sentimos, no hemos encontrado la película.</h6>
+      </ng-template>
+    </div>
+  </div>
+</div>

@@ -4,10 +4,12 @@ import { RouterModule } from '@angular/router';
 import { AdminLayoutRoutes } from './admin-layout.routing';
 import { MovieIndexComponent } from '../../modules/movies/movie-index/movie-index.component';
 import { MovieService } from '../../services/movies/movie.service';
+import { MovieShowComponent } from '../../modules/movies/movie-show/movie-show.component';
 
 @NgModule({
   declarations: [
-    MovieIndexComponent
+    MovieIndexComponent,
+    MovieShowComponent
   ],
   imports: [
     CommonModule,
