@@ -5,6 +5,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
+import { Notification } from './providers/notification.provider';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -14,7 +15,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     AppComponent,
     AdminLayoutComponent,
     SidebarComponent,
-    NavbarComponent
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,7 +23,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     RouterModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    Notification
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
