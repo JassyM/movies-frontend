@@ -24,7 +24,8 @@ export class MovieService {
   }
 
   public update(movie: Movie, id: string): Observable<Movie> {
-    return this.httpClient.put<Movie>(this.baseUrl + id, movie, { headers: this.headers});
+    //return this.httpClient.put<Movie>(this.baseUrl + id, movie, { headers: this.headers});
+    return this.httpClient.put<Movie>('http://www.mocky.io/v2/5e31561a3200004c0088844a',movie, { headers: this.headers});
   }
 
   public getById(id: string): Observable<Movie> {

@@ -10,7 +10,7 @@ import { MovieService } from '../../../services/movies/movie.service';
 })
 export class MovieShowComponent implements OnInit {
 
-  public id: string;
+  private id: string;
   public movie: Movie;
   public loading: boolean = false;
 

@@ -15,7 +15,8 @@
               <p class="card-text">Género: {{movie.genre}}</p>
               <p class="card-text">Puntuación: {{movie.score}}</p>
               <div id="buttons">
-                <a href="#" class="btn btn-outline-primary mr-1">Editar</a>
+                <button href="#editMovie" data-target="#editMovie" class="btn btn-outline-success mr-1"
+                data-toggle="modal">Editar</button>
                 <a href="#" class="btn btn-outline-danger ml-1">Eliminar</a>
               </div>
             </div>
@@ -26,5 +27,11 @@
         <h6>Lo sentimos, no hemos encontrado la película.</h6>
       </ng-template>
     </div>
+  </div>
+</div>
+<div class="modal fade" id="editMovie" data-backdrop="static" tabindex="-1" role="dialog" 
+aria-labelledby="editMovieLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <app-movie-edit></app-movie-edit>
   </div>
 </div>

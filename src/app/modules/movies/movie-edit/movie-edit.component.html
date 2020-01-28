@@ -1,0 +1,32 @@
+<div class="modal-content" *ngIf="movie != undefined">
+  <div class="modal-header">
+    <h5 class="modal-title" id="staticBackdropLabel">Formulario edición de película</h5>
+    <button #btnClose type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <form (ngSubmit)="updateMovie()" #editMovieForm="ngForm">
+    <div class="modal-body">
+      <div class="form-group">
+        <label for="name">Nombre</label>
+        <input type="text" class="form-control" [(ngModel)]="movie.name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="genre">Género</label>
+        <input type="text" class="form-control" [(ngModel)]="movie.genre" name="genre" required>
+      </div>
+      <div class="form-group">
+        <label for="score">Puntuación</label>
+        <input type="text" class="form-control" [(ngModel)]="movie.score" name="score" required>
+      </div>
+      <div class="form-group">
+        <label for="cover">URL Imagen</label>
+        <textarea type="text" class="form-control" [(ngModel)]="movie.cover" name="cover" required></textarea>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+      <button type="submit" class="btn btn-success"[disabled]="!editMovieForm.form.valid || loading">Modificar</button>
+    </div>
+  </form>
+</div>
