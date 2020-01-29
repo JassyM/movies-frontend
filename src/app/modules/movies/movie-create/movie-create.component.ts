@@ -22,7 +22,10 @@ export class MovieCreateComponent implements OnInit {
   ngOnInit() {
   }
 
-  public createMovie(){
+  /**
+   * Crea una película.
+   */
+  public createMovie(): void{
     this.movieService.create(this.movie)
     .subscribe(
       res => {

@@ -25,7 +25,11 @@ export class MovieEditComponent implements OnInit {
     this.getMovie(this.idMovie);
   }
 
-  getMovie(id: string){
+  /**
+   * Obtiene una película dada.
+   * @param id id de la película a consultar.
+   */
+  getMovie(id: string): void{
     this.loading = true;
     this.movieService.getById(id)
     .subscribe(
@@ -40,7 +44,10 @@ export class MovieEditComponent implements OnInit {
       });
   }
 
-  public updateMovie(){
+  /**
+   * Función que actualiza una película.
+   */
+  public updateMovie(): void{
     this.loading = true;
     this.movieService.update(this.movie, this.movie.id)
     .subscribe(

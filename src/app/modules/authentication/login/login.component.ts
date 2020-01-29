@@ -25,8 +25,11 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  onLogin(form: NgForm) {
+  /**
+   * Función que realiza el login
+   * @param  form Formulario de inicio de sesión
+   */
+  public onLogin(form: NgForm) {
     if (form.valid) {
       return this.authenticationService.logInUser(this.username, this.password)
       .subscribe(
@@ -46,8 +49,7 @@ export class LoginComponent implements OnInit {
               this.errorMsg
             );
           }
-
-        }/*,
+        },
         error => {
           if(error.status == 401){
             this.errorMsg = 'Nombre de usuario o contraseña incorrecta. Por favor, inténtelo de nuevo.';
@@ -55,6 +57,7 @@ export class LoginComponent implements OnInit {
           } else {
             this.errorMsg = 'Ups! Ocurrió un error al iniciar sesión. Inténtelo de nuevo.';
             console.log(this.errorMsg);
+            console.log(error)
           }
           this.notification.showNotification(
             'danger',
@@ -62,7 +65,7 @@ export class LoginComponent implements OnInit {
             'right',
             this.errorMsg
           );
-        }*/
+        }
         );
     }
   }

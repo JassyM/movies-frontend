@@ -1,0 +1,770 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>My app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">My app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>MovieShowComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/modules/movies/movie-show/movie-show.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-movie-show</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./movie-show.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./movie-show.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#id">id</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#loading">loading</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#movie">movie</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getMovie">getMovie</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onEdited">onEdited</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(activatedRoute: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, movieService: <a href="../injectables/MovieService.html">MovieService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/modules/movies/movie-show/movie-show.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>activatedRoute</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>movieService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/MovieService.html" target="_self" >MovieService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getMovie"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getMovie
+                        </b>
+                        <a href="#getMovie"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getMovie(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">src/app/modules/movies/movie-show/movie-show.component.ts:34</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Función que obtiene una película dada.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>id de la película a consultar.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="22"
+                            class="link-to-prism">src/app/modules/movies/movie-show/movie-show.component.ts:22</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onEdited"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            onEdited
+                        </b>
+                        <a href="#onEdited"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onEdited(edited: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="53"
+                            class="link-to-prism">src/app/modules/movies/movie-show/movie-show.component.ts:53</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Función que hace un llamado a la función getMovie() para obtener una película.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>edited</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>true si se editó la película.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="id"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            id</b>
+                            <a href="#id"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/modules/movies/movie-show/movie-show.component.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="loading"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            loading</b>
+                            <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/modules/movies/movie-show/movie-show.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="movie"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            movie</b>
+                            <a href="#movie"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Movie.html" target="_self" >Movie</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/modules/movies/movie-show/movie-show.component.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { Router, ActivatedRoute } from &#x27;@angular/router&#x27;;
+import { Movie } from &#x27;../../../models/movies/movie.model&#x27;
+import { MovieService } from &#x27;../../../services/movies/movie.service&#x27;;
+
+@Component({
+  selector: &#x27;app-movie-show&#x27;,
+  templateUrl: &#x27;./movie-show.component.html&#x27;,
+  styleUrls: [&#x27;./movie-show.component.scss&#x27;]
+})
+export class MovieShowComponent implements OnInit {
+
+  private id: string;
+  public movie: Movie;
+  public loading: boolean &#x3D; false;
+
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private movieService: MovieService
+  ) { }
+
+  ngOnInit() {
+    const idkey &#x3D; &#x27;id&#x27;;
+    this.activatedRoute.params.subscribe((data) &#x3D;&gt; {
+      this.id &#x3D; data[idkey];
+    });
+    this.getMovie(this.id);
+  }
+
+  /**
+   * Función que obtiene una película dada.
+   * @param id id de la película a consultar.
+   */
+  public getMovie(id: string): void{
+    this.loading &#x3D; true;
+    this.movieService.getById(id)
+    .subscribe(
+      res &#x3D;&gt; {
+        this.movie &#x3D; res;
+        this.loading &#x3D; false;
+        console.log(this.movie);
+      },
+      error &#x3D;&gt;  {
+        this.loading &#x3D; false;
+        console.log(error);
+      });
+  }
+
+  /**
+   * Función que hace un llamado a la función getMovie() para obtener una película.
+   * @param edited true si se editó la película.
+   */
+  public onEdited(edited: boolean): void {
+    if(edited){
+      this.getMovie(this.id);
+    }
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container&quot;&gt;
+  &lt;div class&#x3D;&quot;row justify-content-md-center&quot;&gt;
+    &lt;h4 *ngIf&#x3D;&quot;loading&quot;&gt;
+      Cargando...
+    &lt;/h4&gt;
+    &lt;div class&#x3D;&quot;col-md-8&quot; *ngIf&#x3D;&quot;!loading&quot;&gt;
+      &lt;div class&#x3D;&quot;card mb-3 h-90 bg-white rounded-lg shadow text-center&quot; *ngIf&#x3D;&quot;movie !&#x3D; undefined; else noMovie&quot;&gt;
+        &lt;div class&#x3D;&quot;row no-gutters&quot;&gt;
+          &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;img src&#x3D;&quot;{{ movie.cover }}&quot; class&#x3D;&quot;card-img p-3&quot; alt&#x3D;&quot;...&quot;&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;col-md-8&quot;&gt;
+            &lt;div class&#x3D;&quot;card-body&quot;&gt;
+              &lt;h2 class&#x3D;&quot;card-title p-4&quot;&gt;{{ movie.name }}&lt;/h2&gt;
+              &lt;p class&#x3D;&quot;card-text&quot;&gt;Género: {{movie.genre}}&lt;/p&gt;
+              &lt;p class&#x3D;&quot;card-text&quot;&gt;Puntuación: {{movie.score}}&lt;/p&gt;
+              &lt;div id&#x3D;&quot;buttons&quot;&gt;
+                &lt;button href&#x3D;&quot;#editMovie&quot; data-target&#x3D;&quot;#editMovie&quot; class&#x3D;&quot;btn btn-outline-success mr-1&quot;
+                data-toggle&#x3D;&quot;modal&quot;&gt;Editar&lt;/button&gt;
+                &lt;button href&#x3D;&quot;#deleteMovie&quot; data-target&#x3D;&quot;#deleteMovie&quot; class&#x3D;&quot;btn btn-outline-danger ml-1&quot;
+                data-toggle&#x3D;&quot;modal&quot;&gt;Eliminar&lt;/button&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;ng-template #noMovie&gt;
+        &lt;h6&gt;Lo sentimos, no hemos encontrado la película.&lt;/h6&gt;
+      &lt;/ng-template&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div *ngIf&#x3D;&quot;movie !&#x3D; undefined&quot; class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;editMovie&quot; data-backdrop&#x3D;&quot;static&quot; tabindex&#x3D;&quot;-1&quot; role&#x3D;&quot;dialog&quot; 
+aria-labelledby&#x3D;&quot;editMovieLabel&quot; aria-hidden&#x3D;&quot;true&quot;&gt;
+  &lt;div class&#x3D;&quot;modal-dialog&quot; role&#x3D;&quot;document&quot;&gt;
+    &lt;app-movie-edit [idMovie]&#x3D;&quot;movie.id&quot; (edited)&#x3D;&quot;onEdited($event)&quot;&gt;&lt;/app-movie-edit&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div *ngIf&#x3D;&quot;movie !&#x3D; undefined&quot; class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;deleteMovie&quot; tabindex&#x3D;&quot;-1&quot; role&#x3D;&quot;dialog&quot; 
+aria-labelledby&#x3D;&quot;deleteMovieLabel&quot; aria-hidden&#x3D;&quot;true&quot;&gt;
+  &lt;div class&#x3D;&quot;modal-dialog&quot; role&#x3D;&quot;document&quot;&gt;
+    &lt;app-movie-delete [idMovie]&#x3D;&quot;movie.id&quot;&gt;&lt;/app-movie-delete&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./movie-show.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#imagen {
+  height: 400px;
+  width: 200px;
+}
+
+#buttons {
+  padding-top: 48px;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="container">  <div class="row justify-content-md-center">    <h4 *ngIf="loading">      Cargando...    </h4>    <div class="col-md-8" *ngIf="!loading">      <div class="card mb-3 h-90 bg-white rounded-lg shadow text-center" *ngIf="movie != undefined; else noMovie">        <div class="row no-gutters">          <div class="col-md-4">            <img src="{{ movie.cover }}" class="card-img p-3" alt="...">          </div>          <div class="col-md-8">            <div class="card-body">              <h2 class="card-title p-4">{{ movie.name }}</h2>              <p class="card-text">Género: {{movie.genre}}</p>              <p class="card-text">Puntuación: {{movie.score}}</p>              <div id="buttons">                <button href="#editMovie" data-target="#editMovie" class="btn btn-outline-success mr-1"                data-toggle="modal">Editar</button>                <button href="#deleteMovie" data-target="#deleteMovie" class="btn btn-outline-danger ml-1"                data-toggle="modal">Eliminar</button>              </div>            </div>          </div>        </div>      </div>      <ng-template #noMovie>        <h6>Lo sentimos, no hemos encontrado la película.</h6>      </ng-template>    </div>  </div></div><div *ngIf="movie != undefined" class="modal fade" id="editMovie" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="editMovieLabel" aria-hidden="true">  <div class="modal-dialog" role="document">    <app-movie-edit [idMovie]="movie.id" (edited)="onEdited($event)"></app-movie-edit>  </div></div><div *ngIf="movie != undefined" class="modal fade" id="deleteMovie" tabindex="-1" role="dialog" aria-labelledby="deleteMovieLabel" aria-hidden="true">  <div class="modal-dialog" role="document">    <app-movie-delete [idMovie]="movie.id"></app-movie-delete>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AdminLayoutComponent', 'selector': 'app-admin-layout'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthLayoutComponent', 'selector': 'app-auth-layout'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MovieCreateComponent', 'selector': 'app-movie-create'},{'name': 'MovieDeleteComponent', 'selector': 'app-movie-delete'},{'name': 'MovieEditComponent', 'selector': 'app-movie-edit'},{'name': 'MovieIndexComponent', 'selector': 'app-movie-index'},{'name': 'MovieShowComponent', 'selector': 'app-movie-show'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'MovieShowComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'MovieShowComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

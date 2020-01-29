@@ -9,14 +9,13 @@ import { MovieService } from '../../../services/movies/movie.service';
 })
 export class MovieIndexComponent implements OnInit {
 
-  genreList: string[] = ['Todo', 'Drama', 'Comedia', 'Acción', 'Romance', 'Horror', 
+  genreList: string[] = ['Todo', 'Drama', 'Comedia', 'Acción', 'Romance', 'Horror',
   'Fantasía', 'Ciencia Ficción', 'Suspenso', 'Aventura', 'Animación', 'Documental'];
   movies: Array<Movie>;
   loading: boolean = true;
   test: any;
   startIndex = 0;
   endIndex = 10;
-  end: number = 0;
 
   constructor(private movieService: MovieService) { }
 
@@ -24,7 +23,10 @@ export class MovieIndexComponent implements OnInit {
     this.getMovies();
   }
 
-  getMovies(){
+  /**
+   * Obtiene el listado de todas las películas.
+   */
+  public getMovies(): void{
     this.loading = true;
     this.movieService.getAll()
     .subscribe(
@@ -39,23 +41,31 @@ export class MovieIndexComponent implements OnInit {
       });
   }
 
-  getArrayFromNumbers(length) {
-    /* return new Array(length).map((a,i) => {
-      return i
-    }); */
+  /**
+   * Función usada para realizar la paginación. De acuerdo al tamaño de la lista
+   * de películas, se crea un array de indices.
+   * @param  length Tamaño de una lista
+   * @return        Array de indices
+   */
+  public getArrayFromNumbers(length): Array<any> {
     return new Array(Math.ceil(length/10));
   }
 
-  updateIndex(pageIndex: number) {
+  /**
+   * Actualiza los indices de la paginación.
+   */
+  public updateIndex(pageIndex: number): void {
     if (pageIndex > -1) {
       this.startIndex = pageIndex * 10;
       this.endIndex = this.startIndex + 10;
     }
-    console.log("End: " + this.end);
-    
   }
 
-  public onCreated(created: boolean) {
+  /**
+   * Hace un llamado a la función getMovies() para obtener el listado de películas.
+   * @param created  true si se creó una película
+   */
+  public onCreated(created: boolean): void {
     if(created) {
       this.getMovies();
     }

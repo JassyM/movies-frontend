@@ -27,7 +27,11 @@ export class MovieShowComponent implements OnInit {
     this.getMovie(this.id);
   }
 
-  getMovie(id: string){
+  /**
+   * Función que obtiene una película dada.
+   * @param id id de la película a consultar.
+   */
+  public getMovie(id: string): void{
     this.loading = true;
     this.movieService.getById(id)
     .subscribe(
@@ -42,7 +46,11 @@ export class MovieShowComponent implements OnInit {
       });
   }
 
-  public onEdited(edited: boolean) {
+  /**
+   * Función que hace un llamado a la función getMovie() para obtener una película.
+   * @param edited true si se editó la película.
+   */
+  public onEdited(edited: boolean): void {
     if(edited){
       this.getMovie(this.id);
     }

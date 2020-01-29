@@ -22,7 +22,10 @@ export class MovieDeleteComponent implements OnInit {
   ngOnInit() {
   }
 
-  public deleteMovie(){
+  /**
+   * Elimina una película.
+   */
+  public deleteMovie(): void{
     this.movieService.delete(this.idMovie).subscribe(
       res => {
         console.log('Eliminada: ' + res);
