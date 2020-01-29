@@ -15,9 +15,6 @@ export class MovieShowComponent implements OnInit {
   public loading: boolean = false;
   public starWarning: any;
   public starDark: any;
-  /*public strokeColor: any;
-  public dashoffset: number;
-  public loadingProgress: boolean = false;*/
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -30,8 +27,6 @@ export class MovieShowComponent implements OnInit {
       this.id = data[idkey];
     });
     this.getMovie(this.id);
-
-    //this.calculateProgress();
   }
 
   /**
@@ -66,7 +61,11 @@ export class MovieShowComponent implements OnInit {
     }
   }
 
-  public calculateStars(movie: Movie){
+  /**
+   * Calcula la cantidad de estrellas, realizando un proceso de redondeo respecto al puntaje.
+   * @param  movie Película a la que se le calcula la cantidad de estrellas.
+   */
+  public calculateStars(movie: Movie): void{
     if (movie != undefined && movie != null){
       let cantStar = Math.round(Number.parseFloat(movie.score));
       this.starWarning = new Array(cantStar);

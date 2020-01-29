@@ -27,8 +27,8 @@
           <div class="col-md-8">
             <div class="card-body row justify-content-md-center">
               <h1 class="card-title col-md-12 p-4">{{ movie.name }}</h1>
-              <p class="card-text col-md-12">Género: {{movie.genre}}</p>
-              <p class="card-text col-md-12">Puntuación: {{movie.score}}</p>
+              <p class="card-text col-md-12"><strong>Género:</strong> {{movie.genre}}</p>
+              <p class="card-text col-md-12"><strong>Puntuación:</strong> {{movie.score}}</p>
               <div class="container" *ngIf="starWarning != null && starWarning != null">
                 <i class="material-icons text-warning" *ngFor="let item of starWarning">star</i>
                 <i class="material-icons text-dark" *ngFor="let item of starDark">star</i>

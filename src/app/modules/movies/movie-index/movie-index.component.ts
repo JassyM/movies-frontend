@@ -18,6 +18,7 @@ export class MovieIndexComponent implements OnInit {
   public startIndex = 0;
   public endIndex = 10;
   public loadingFilter: boolean = true;
+  public generoSeleccionado: string = "Todo";
 
   constructor(private movieService: MovieService) { }
 
@@ -77,9 +78,14 @@ export class MovieIndexComponent implements OnInit {
     }
   }
 
-  public filterMovies(genre: string) {
+  /**
+   * Filtra las películas de acuerdo a un género.
+   * @param genre Genero seleccionado.
+   */
+  public filterMovies(genre: string): void {
     this.loadingFilter = true;
     this.filteredMovies = null;
+    this.generoSeleccionado = genre;
     if(genre != 'Todo') {
       this.filteredMovies = this.movies.filter(movie => {
         if(movie.genre == genre)
