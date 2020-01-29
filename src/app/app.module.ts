@@ -12,6 +12,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 
 import { AuthenticationService } from './services/authentication/authentication.service';
+import { AuthGuardService } from './services/authentication/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { AuthenticationService } from './services/authentication/authentication.
   ],
   providers: [
     Notification,
-    AuthenticationService
+    AuthenticationService,
+    AuthGuardService
   ],
   bootstrap: [AppComponent]
 })

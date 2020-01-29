@@ -39,7 +39,7 @@ export class AuthenticationService {
   static getToken() {
     let auth = localStorage.getItem("accessToken");
     if (!isNullOrUndefined(auth)) {
-      return JSON.parse(auth);
+      return auth;
     } else {
       return {};
     }
@@ -48,8 +48,7 @@ export class AuthenticationService {
   public getCurrentUser(): any {
     let user_string = localStorage.getItem("currentUser");
     if (!isNullOrUndefined(user_string)) {
-      let user: any = JSON.parse(user_string);
-      return user;
+      return user_string;
     } else {
       return null;
     }

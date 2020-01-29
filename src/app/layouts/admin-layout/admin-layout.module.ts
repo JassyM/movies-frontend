@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule }   from '@angular/forms';
+import { HttpClientModule } from "@angular/common/http";
 import { Notification } from '../../providers/notification.provider';
 import { AdminLayoutRoutes } from './admin-layout.routing';
 import { MovieIndexComponent } from '../../modules/movies/movie-index/movie-index.component';
@@ -22,6 +23,7 @@ import { MovieDeleteComponent } from '../../modules/movies/movie-delete/movie-de
   imports: [
     CommonModule,
     RouterModule.forChild(AdminLayoutRoutes),
+    HttpClientModule,
     FormsModule
   ],
   providers: [
