@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>My app documentation</title>
+        <title>movies-frontend documentation</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,7 +13,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">My app documentation</a>
+            <a href="../" class="navbar-brand">movies-frontend documentation</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -387,14 +387,11 @@ export class AuthLayoutComponent implements OnInit {
                 </p>
                 <pre class="line-numbers"><code class="language-scss">.main-content {
   min-height: 100vh;
-  // background-image: url(&quot;../../../assets/img/wallpaper.jpg&quot;);
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // background-size: cover;
 }
 
 #img {
   background-image: url(&quot;../../../assets/img/wallpaper.jpg&quot;);
+  //background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1)),url(&quot;../../../assets/img/wallpaper.jpg&quot;);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -404,9 +401,13 @@ export class AuthLayoutComponent implements OnInit {
 }
 
 .main-view {
-  padding: 0px;
-  position: relative;
   background-color: rgb(255, 255, 255);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  //box-shadow: 0 16px 38px -12px rgba(0,0,0,.56), 0 4px 25px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2)
 }
 </code></pre>
     </div>

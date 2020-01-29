@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>My app documentation</title>
+        <title>movies-frontend documentation</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,7 +13,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">My app documentation</a>
+            <a href="../" class="navbar-brand">movies-frontend documentation</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -133,6 +133,9 @@
                                 <a href="#btnClose">btnClose</a>
                             </li>
                             <li>
+                                <a href="#genreList">genreList</a>
+                            </li>
+                            <li>
                                     <span class="modifier">Public</span>
                                 <a href="#loading">loading</a>
                             </li>
@@ -213,7 +216,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/modules/movies/movie-edit/movie-edit.component.ts:17</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/modules/movies/movie-edit/movie-edit.component.ts:19</a></div>
                             </td>
                         </tr>
 
@@ -340,8 +343,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="32"
-                            class="link-to-prism">src/app/modules/movies/movie-edit/movie-edit.component.ts:32</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">src/app/modules/movies/movie-edit/movie-edit.component.ts:34</a></div>
                 </td>
             </tr>
 
@@ -417,8 +420,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="24"
-                            class="link-to-prism">src/app/modules/movies/movie-edit/movie-edit.component.ts:24</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/app/modules/movies/movie-edit/movie-edit.component.ts:26</a></div>
                 </td>
             </tr>
 
@@ -458,8 +461,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="50"
-                            class="link-to-prism">src/app/modules/movies/movie-edit/movie-edit.component.ts:50</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="52"
+                            class="link-to-prism">src/app/modules/movies/movie-edit/movie-edit.component.ts:52</a></div>
                 </td>
             </tr>
 
@@ -513,6 +516,39 @@
                         <tr>
                             <td class="col-md-4">
                                     <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/modules/movies/movie-edit/movie-edit.component.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="genreList"></a>
+                        <span class="name">
+                            <b>
+                            genreList</b>
+                            <a href="#genreList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>string[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[&#x27;Drama&#x27;, &#x27;Comedia&#x27;, &#x27;Acción&#x27;, &#x27;Romance&#x27;, &#x27;Horror&#x27;,
+  &#x27;Fantasía&#x27;, &#x27;Ciencia Ficción&#x27;, &#x27;Suspenso&#x27;, &#x27;Aventura&#x27;, &#x27;Animación&#x27;, &#x27;Documental&#x27;]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/modules/movies/movie-edit/movie-edit.component.ts:18</a></div>
                             </td>
                         </tr>
 
@@ -603,6 +639,8 @@ export class MovieEditComponent implements OnInit {
   @ViewChild(&#x27;btnClose&#x27;) btnClose : ElementRef;
   public movie: Movie;
   public loading: boolean &#x3D; false;
+  genreList: string[] &#x3D; [&#x27;Drama&#x27;, &#x27;Comedia&#x27;, &#x27;Acción&#x27;, &#x27;Romance&#x27;, &#x27;Horror&#x27;,
+  &#x27;Fantasía&#x27;, &#x27;Ciencia Ficción&#x27;, &#x27;Suspenso&#x27;, &#x27;Aventura&#x27;, &#x27;Animación&#x27;, &#x27;Documental&#x27;];
 
   constructor(
     private movieService: MovieService,
@@ -683,11 +721,16 @@ export class MovieEditComponent implements OnInit {
       &lt;/div&gt;
       &lt;div class&#x3D;&quot;form-group&quot;&gt;
         &lt;label for&#x3D;&quot;genre&quot;&gt;Género&lt;/label&gt;
-        &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;movie.genre&quot; name&#x3D;&quot;genre&quot; required&gt;
+        &lt;select class&#x3D;&quot;form-control custom-select&quot; value&#x3D;&quot;genre&quot; [(ngModel)]&#x3D;&quot;movie.genre&quot; name&#x3D;&quot;genre&quot; required&gt;
+          &lt;option *ngFor&#x3D;&quot;let genr of genreList&quot;&gt;{{genr}}&lt;/option&gt;
+        &lt;/select&gt;
       &lt;/div&gt;
       &lt;div class&#x3D;&quot;form-group&quot;&gt;
         &lt;label for&#x3D;&quot;score&quot;&gt;Puntuación&lt;/label&gt;
-        &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;movie.score&quot; name&#x3D;&quot;score&quot; required&gt;
+        &lt;input type&#x3D;&quot;range&quot; min&#x3D;&quot;1.0&quot; max&#x3D;&quot;10.0&quot; step&#x3D;&quot;0.1&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;movie.score&quot; name&#x3D;&quot;score&quot; required&gt;
+        &lt;p id&#x3D;&quot;pscore&quot;&gt;
+          {{movie.score}}
+        &lt;/p&gt;
       &lt;/div&gt;
       &lt;div class&#x3D;&quot;form-group&quot;&gt;
         &lt;label for&#x3D;&quot;cover&quot;&gt;URL Imagen&lt;/label&gt;
@@ -699,14 +742,18 @@ export class MovieEditComponent implements OnInit {
       &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-success&quot;[disabled]&#x3D;&quot;!editMovieForm.form.valid || loading&quot;&gt;Modificar&lt;/button&gt;
     &lt;/div&gt;
   &lt;/form&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
                     <code>./movie-edit.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss"></code></pre>
+                <pre class="line-numbers"><code class="language-scss">#pscore {
+  text-align: center;
+}
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -734,7 +781,7 @@ export class MovieEditComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="modal-content" *ngIf="movie != undefined">  <div class="modal-header">    <h5 class="modal-title" id="staticBackdropLabel">Formulario edición de película</h5>    <button #btnClose type="button" class="close" data-dismiss="modal" aria-label="Close">      <span aria-hidden="true">&times;</span>    </button>  </div>  <form (ngSubmit)="updateMovie()" #editMovieForm="ngForm">    <div class="modal-body">      <div class="form-group">        <label for="name">Nombre</label>        <input type="text" class="form-control" [(ngModel)]="movie.name" name="name" required>      </div>      <div class="form-group">        <label for="genre">Género</label>        <input type="text" class="form-control" [(ngModel)]="movie.genre" name="genre" required>      </div>      <div class="form-group">        <label for="score">Puntuación</label>        <input type="text" class="form-control" [(ngModel)]="movie.score" name="score" required>      </div>      <div class="form-group">        <label for="cover">URL Imagen</label>        <textarea type="text" class="form-control" [(ngModel)]="movie.cover" name="cover" required></textarea>      </div>    </div>    <div class="modal-footer">      <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>      <button type="submit" class="btn btn-success"[disabled]="!editMovieForm.form.valid || loading">Modificar</button>    </div>  </form></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="modal-content" *ngIf="movie != undefined">  <div class="modal-header">    <h5 class="modal-title" id="staticBackdropLabel">Formulario edición de película</h5>    <button #btnClose type="button" class="close" data-dismiss="modal" aria-label="Close">      <span aria-hidden="true">&times;</span>    </button>  </div>  <form (ngSubmit)="updateMovie()" #editMovieForm="ngForm">    <div class="modal-body">      <div class="form-group">        <label for="name">Nombre</label>        <input type="text" class="form-control" [(ngModel)]="movie.name" name="name" required>      </div>      <div class="form-group">        <label for="genre">Género</label>        <select class="form-control custom-select" value="genre" [(ngModel)]="movie.genre" name="genre" required>          <option *ngFor="let genr of genreList">{{genr}}</option>        </select>      </div>      <div class="form-group">        <label for="score">Puntuación</label>        <input type="range" min="1.0" max="10.0" step="0.1" class="form-control" [(ngModel)]="movie.score" name="score" required>        <p id="pscore">          {{movie.score}}        </p>      </div>      <div class="form-group">        <label for="cover">URL Imagen</label>        <textarea type="text" class="form-control" [(ngModel)]="movie.cover" name="cover" required></textarea>      </div>    </div>    <div class="modal-footer">      <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>      <button type="submit" class="btn btn-success"[disabled]="!editMovieForm.form.valid || loading">Modificar</button>    </div>  </form></div></div>'
     var COMPONENTS = [{'name': 'AdminLayoutComponent', 'selector': 'app-admin-layout'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthLayoutComponent', 'selector': 'app-auth-layout'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MovieCreateComponent', 'selector': 'app-movie-create'},{'name': 'MovieDeleteComponent', 'selector': 'app-movie-delete'},{'name': 'MovieEditComponent', 'selector': 'app-movie-edit'},{'name': 'MovieIndexComponent', 'selector': 'app-movie-index'},{'name': 'MovieShowComponent', 'selector': 'app-movie-show'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'MovieEditComponent'};

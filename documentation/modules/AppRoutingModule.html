@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>My app documentation</title>
+        <title>movies-frontend documentation</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,7 +13,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">My app documentation</a>
+            <a href="../" class="navbar-brand">movies-frontend documentation</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -100,10 +100,10 @@ const routes: Routes &#x3D; [
         loadChildren: &#x27;./layouts/admin-layout/admin-layout.module#AdminLayoutModule&#x27;
       }
     ]
+  },
+  {
+    path: &quot;**&quot;, redirectTo: &quot;/&quot;, pathMatch: &quot;full&quot;
   }
-  // {
-  //   path: &quot;**&quot;, redirectTo: &quot;/&quot;, pathMatch: &quot;full&quot;
-  // }
 ];
 
 @NgModule({

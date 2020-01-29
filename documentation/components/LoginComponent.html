@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>My app documentation</title>
+        <title>movies-frontend documentation</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,7 +13,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">My app documentation</a>
+            <a href="../" class="navbar-brand">movies-frontend documentation</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -598,7 +598,7 @@ export class LoginComponent implements OnInit {
   &lt;div class&#x3D;&quot;row justify-content-md-center&quot;&gt;
     &lt;div class&#x3D;&quot;col-12 mt-5&quot;&gt;
         &lt;div class&#x3D;&quot;col-12 text-center text-muted mb-4 mt-4&quot;&gt;
-          &lt;span class&#x3D;&quot;card-title text-center text-dark&quot;&gt;&lt;h3&gt;SKRN.&lt;/h3&gt;&lt;/span&gt;
+          &lt;span class&#x3D;&quot;card-title text-center text-dark&quot;&gt;&lt;h1&gt;SKRN.&lt;/h1&gt;&lt;/span&gt;
         &lt;/div&gt;
         &lt;form role&#x3D;&quot;form&quot; #formLogin&#x3D;&quot;ngForm&quot; (ngSubmit)&#x3D;&quot;onLogin(formLogin)&quot; class&#x3D;&quot;col-12&quot;&gt;
           &lt;div class&#x3D;&quot;form-group&quot;&gt;
@@ -616,7 +616,7 @@ export class LoginComponent implements OnInit {
           &lt;div class&#x3D;&quot;text-center&quot;&gt;
             &lt;button
               type&#x3D;&quot;submit&quot;
-              class&#x3D;&quot;btn btn-primary my-4 rounded-pill&quot;
+              class&#x3D;&quot;btn btn-success my-4 rounded-pill&quot;
               title&#x3D;&quot;Iniciar sesión&quot;
               [disabled]&#x3D;&quot;!formLogin.form.valid&quot;&gt;
               Iniciar sesión
@@ -673,7 +673,7 @@ export class LoginComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="container">  <div class="row justify-content-md-center">    <div class="col-12 mt-5">        <div class="col-12 text-center text-muted mb-4 mt-4">          <span class="card-title text-center text-dark"><h3>SKRN.</h3></span>        </div>        <form role="form" #formLogin="ngForm" (ngSubmit)="onLogin(formLogin)" class="col-12">          <div class="form-group">            <input class="form-control login" [(ngModel)]="username" placeholder="Nombre de usuario"            type="text" title="Nombre de usuario" name="username" required>          </div>          <div class="form-group">            <input class="form-control login" [(ngModel)]="password" placeholder="Contraseña"            type="password" title="Nombre de usuario" name="password" required>          </div>          <div class="form-group form-check">            <input type="checkbox" class="form-check-input" id="exampleCheck1">            <label class="form-check-label" for="exampleCheck1">Recordarme</label>          </div>          <div class="text-center">            <button              type="submit"              class="btn btn-primary my-4 rounded-pill"              title="Iniciar sesión"              [disabled]="!formLogin.form.valid">              Iniciar sesión            </button>          </div>      </form>    </div>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="container">  <div class="row justify-content-md-center">    <div class="col-12 mt-5">        <div class="col-12 text-center text-muted mb-4 mt-4">          <span class="card-title text-center text-dark"><h1>SKRN.</h1></span>        </div>        <form role="form" #formLogin="ngForm" (ngSubmit)="onLogin(formLogin)" class="col-12">          <div class="form-group">            <input class="form-control login" [(ngModel)]="username" placeholder="Nombre de usuario"            type="text" title="Nombre de usuario" name="username" required>          </div>          <div class="form-group">            <input class="form-control login" [(ngModel)]="password" placeholder="Contraseña"            type="password" title="Nombre de usuario" name="password" required>          </div>          <div class="form-group form-check">            <input type="checkbox" class="form-check-input" id="exampleCheck1">            <label class="form-check-label" for="exampleCheck1">Recordarme</label>          </div>          <div class="text-center">            <button              type="submit"              class="btn btn-success my-4 rounded-pill"              title="Iniciar sesión"              [disabled]="!formLogin.form.valid">              Iniciar sesión            </button>          </div>      </form>    </div>  </div></div></div>'
     var COMPONENTS = [{'name': 'AdminLayoutComponent', 'selector': 'app-admin-layout'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AuthLayoutComponent', 'selector': 'app-auth-layout'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MovieCreateComponent', 'selector': 'app-movie-create'},{'name': 'MovieDeleteComponent', 'selector': 'app-movie-delete'},{'name': 'MovieEditComponent', 'selector': 'app-movie-edit'},{'name': 'MovieIndexComponent', 'selector': 'app-movie-index'},{'name': 'MovieShowComponent', 'selector': 'app-movie-show'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'LoginComponent'};
