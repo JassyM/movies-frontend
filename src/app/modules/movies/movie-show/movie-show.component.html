@@ -26,9 +26,13 @@
           </div>
           <div class="col-md-8">
             <div class="card-body row justify-content-md-center">
-              <h2 class="card-title col-md-12 p-4">{{ movie.name }}</h2>
+              <h1 class="card-title col-md-12 p-4">{{ movie.name }}</h1>
               <p class="card-text col-md-12">Género: {{movie.genre}}</p>
               <p class="card-text col-md-12">Puntuación: {{movie.score}}</p>
+              <div class="container" *ngIf="starWarning != null && starWarning != null">
+                <i class="material-icons text-warning" *ngFor="let item of starWarning">star</i>
+                <i class="material-icons text-dark" *ngFor="let item of starDark">star</i>
+              </div>
               <!-- <div class="col-md-12 card-text" *ngIf="strokeColor != null && dashoffset != null">
                 <svg height="100" width="100">
                   <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="#eee"

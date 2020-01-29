@@ -13,6 +13,8 @@ export class MovieShowComponent implements OnInit {
   private id: string;
   public movie: Movie;
   public loading: boolean = false;
+  public starWarning: any;
+  public starDark: any;
   /*public strokeColor: any;
   public dashoffset: number;
   public loadingProgress: boolean = false;*/
@@ -43,9 +45,9 @@ export class MovieShowComponent implements OnInit {
       res => {
         this.movie = res;
         console.log(this.movie);
-        /*setTimeout(()=>{
-          this.calculateProgress(this.movie);
-        }, 3000);*/
+        setTimeout(()=>{
+          this.calculateStars(this.movie);
+        }, 3000);
         this.loading = false;
       },
       error =>  {
@@ -63,19 +65,13 @@ export class MovieShowComponent implements OnInit {
       this.getMovie(this.id);
     }
   }
-/*
-  public calculateProgress(movie: Movie) {
-    this.loadingProgress = true;
-    let score = Number.parseFloat(movie.score);
-    console.log("score: " + score);
-    let ptj = (5*30.815).toFixed(2);
-    this.dashoffset = Number.parseFloat(ptj);
-    if(score > 6.0) {
-      this.strokeColor = "rgb(108,185,124)";
-    } else {
-      this.strokeColor = "rgb(232, 98, 60)";
+
+  public calculateStars(movie: Movie){
+    if (movie != undefined && movie != null){
+      let cantStar = Math.round(Number.parseFloat(movie.score));
+      this.starWarning = new Array(cantStar);
+      this.starDark = new Array(10 - cantStar);
     }
-    this.loadingProgress = false;
-  }*/
+  }
 
 }

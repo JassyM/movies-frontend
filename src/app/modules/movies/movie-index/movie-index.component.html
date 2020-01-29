@@ -1,13 +1,14 @@
 <div class="container">
   <nav class="nav">
     <div class="btn-group" role="group" aria-label="Géneros">
-      <button type="button" class="btn btn-outline-success" *ngFor="let genre of genreList">{{genre}}</button>
+      <button type="button" class="btn btn-outline-success" *ngFor="let genre of genreList"
+        (click)="filterMovies(genre)">{{genre}}</button>
     </div>
   </nav>
   <h1 class="text-center p-4">
     Películas SKRN
   </h1>
-  <div class="container" *ngIf="!loading && (movies?.length > 0)">
+  <div class="container" *ngIf="!loadingFilter && (filteredMovies != undefined)">
     <div class="pb-4">
       <ul class="nav justify-content-end nav-tabs">
         <li class="nav-item">
@@ -20,14 +21,14 @@
       </ul>
     </div>
     <div class="row row-cols-1 row-cols-md-5 row-cols-sm-3">
-      <div class="col mb-4" *ngFor="let movie of movies | slice:startIndex:endIndex">
+      <div class="col mb-4" *ngFor="let movie of filteredMovies | slice:startIndex:endIndex">
         <a routerLinkActive="active" [routerLink]="['movies', movie.id]"
         class="card text-center h-100 bg-white rounded-lg shadow btncard" role="button">
           <img src="{{ movie.cover }}" class="card-img-top" alt="...">
           <div class="card-body">
             <p class="card-title">{{ movie.name }}</p>
             <p class="card-text">
-              {{movie.score}} <span><i class="material-icons text-warning">start</i></span>
+              {{movie.score}} <span><i class="material-icons text-warning">star</i></span>
             </p>
 
           </div>
@@ -37,11 +38,11 @@
     <nav aria-label="Paginación">
       <ul class="pagination pagination-lg justify-content-center">
         <li class="page-item">
-          <a class="page-link" (click)="updateIndex((startIndex/12)-1)" aria-label="Previous">
+          <a class="page-link" (click)="updateIndex((startIndex/10)-1)" aria-label="Previous">
             <span aria-hidden="true">&laquo;</span>
           </a>
         </li>
-        <li *ngFor="let item of getArrayFromNumbers(movies.length);let i = index" class="page-item">
+        <li *ngFor="let item of getArrayFromNumbers(filteredMovies.length);let i = index" class="page-item">
           <a class="page-link" (click)="updateIndex(i)">{{i + 1}}</a>
         </li>
         <li class="page-item">

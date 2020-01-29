@@ -9,13 +9,15 @@ import { MovieService } from '../../../services/movies/movie.service';
 })
 export class MovieIndexComponent implements OnInit {
 
-  genreList: string[] = ['Todo', 'Drama', 'Comedia', 'Acción', 'Romance', 'Horror',
+  public genreList: string[] = ['Todo', 'Drama', 'Comedia', 'Acción', 'Romance', 'Horror',
   'Fantasía', 'Ciencia Ficción', 'Suspenso', 'Aventura', 'Animación', 'Documental'];
-  movies: Array<Movie>;
-  loading: boolean = true;
+  public movies: Array<Movie>;
+  public filteredMovies: Array<Movie>;
+  public loading: boolean = true;
   test: any;
-  startIndex = 0;
-  endIndex = 12;
+  public startIndex = 0;
+  public endIndex = 10;
+  public loadingFilter: boolean = true;
 
   constructor(private movieService: MovieService) { }
 
@@ -28,15 +30,19 @@ export class MovieIndexComponent implements OnInit {
    */
   public getMovies(): void{
     this.loading = true;
+    this.loadingFilter = true;
     this.movieService.getAll()
     .subscribe(
       res => {
         this.movies = res;
+        this.filteredMovies = res;
         this.loading = false;
+        this.loadingFilter = false;
         console.log(this.movies.length)
       },
       error => {
         this.loading = false;
+        this.loadingFilter = false;
         console.log(error);
       });
   }
@@ -56,8 +62,8 @@ export class MovieIndexComponent implements OnInit {
    */
   public updateIndex(pageIndex: number): void {
     if (pageIndex > -1) {
-      this.startIndex = pageIndex * 12;
-      this.endIndex = this.startIndex + 12;
+      this.startIndex = pageIndex * 10;
+      this.endIndex = this.startIndex + 10;
     }
   }
 
@@ -69,6 +75,23 @@ export class MovieIndexComponent implements OnInit {
     if(created) {
       this.getMovies();
     }
+  }
+
+  public filterMovies(genre: string) {
+    this.loadingFilter = true;
+    this.filteredMovies = null;
+    if(genre != 'Todo') {
+      this.filteredMovies = this.movies.filter(movie => {
+        if(movie.genre == genre)
+          return movie;
+      });
+      this.loadingFilter = false;
+    } else {
+      this.filteredMovies = this.movies.slice();
+      this.loadingFilter = false;
+    }
+    this.startIndex = 0;
+    this.endIndex = 10;
   }
 
 }
