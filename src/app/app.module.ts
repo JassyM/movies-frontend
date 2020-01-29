@@ -9,6 +9,9 @@ import { Notification } from './providers/notification.provider';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
+
+import { AuthenticationService } from './services/authentication/authentication.service';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     AdminLayoutComponent,
     SidebarComponent,
     NavbarComponent,
+    AuthLayoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +28,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     HttpClientModule
   ],
   providers: [
-    Notification
+    Notification,
+    AuthenticationService
   ],
   bootstrap: [AppComponent]
 })
