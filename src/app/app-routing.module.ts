@@ -28,10 +28,10 @@ const routes: Routes = [
         loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
       }
     ]
+  },
+  {
+    path: "**", redirectTo: "/", pathMatch: "full"
   }
-  // {
-  //   path: "**", redirectTo: "/", pathMatch: "full"
-  // }
 ];
 
 @NgModule({

@@ -15,6 +15,8 @@ export class MovieEditComponent implements OnInit {
   @ViewChild('btnClose') btnClose : ElementRef;
   public movie: Movie;
   public loading: boolean = false;
+  genreList: string[] = ['Drama', 'Comedia', 'Acción', 'Romance', 'Horror',
+  'Fantasía', 'Ciencia Ficción', 'Suspenso', 'Aventura', 'Animación', 'Documental'];
 
   constructor(
     private movieService: MovieService,

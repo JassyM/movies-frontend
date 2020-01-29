@@ -13,6 +13,8 @@ export class MovieCreateComponent implements OnInit {
   public movie = new Movie(null, null, null, null, null);
   @ViewChild('btnClose') btnClose : ElementRef;
   @Output() public created = new EventEmitter<boolean>();
+  genreList: string[] = ['Drama', 'Comedia', 'Acción', 'Romance', 'Horror',
+  'Fantasía', 'Ciencia Ficción', 'Suspenso', 'Aventura', 'Animación', 'Documental'];
 
   constructor(
     private movieService: MovieService,

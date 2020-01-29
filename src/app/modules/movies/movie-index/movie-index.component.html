@@ -11,7 +11,7 @@
     <div class="pb-4">
       <ul class="nav justify-content-end nav-tabs">
         <li class="nav-item">
-          <a href="#addMovie" data-target="#addMovie" class="nav-link btn btn-outline-success" data-toggle="modal" 
+          <a href="#addMovie" data-target="#addMovie" class="nav-link btn btn-outline-success" data-toggle="modal"
           title="Agregar Película">
             <i class="material-icons">add_circle</i> Agregar Película
             <div class="ripple-container"></div>
@@ -21,19 +21,15 @@
     </div>
     <div class="row row-cols-1 row-cols-md-5 row-cols-sm-3">
       <div class="col mb-4" *ngFor="let movie of movies | slice:startIndex:endIndex">
-        <a routerLinkActive="active" [routerLink]="['movies', movie.id]" class="card h-100 bg-white rounded-lg shadow"
-        role="button">
+        <a routerLinkActive="active" [routerLink]="['movies', movie.id]"
+        class="card text-center h-100 bg-white rounded-lg shadow btncard" role="button">
           <img src="{{ movie.cover }}" class="card-img-top" alt="...">
           <div class="card-body">
             <p class="card-title">{{ movie.name }}</p>
-            <p class="card-text">Score: {{movie.score}}</p>
-            <!-- <svg class="card-text" height="100" width="100" style="display: block; width: 100%;">
-              <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="rgb(108,185,124)"
-                stroke-width="4" fill-opacity="0"></path>
-              <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="#eee" 
-                stroke-width="4" fill-opacity="0" style="stroke-dasharray: 301.635, 301.635; stroke-dashoffset: calc(30.815*4);"></path>
-              </svg>
-            <div class="progressbar-text" style="position: absolute; left: 50%; top: 85%; padding: 0px; margin: 0px; transform: translate(-50%, -50%); color: rgb(0, 0, 0); font-size: 1rem;">54</div> -->
+            <p class="card-text">
+              {{movie.score}} <span><i class="material-icons text-warning">start</i></span>
+            </p>
+
           </div>
         </a>
       </div>
@@ -41,7 +37,7 @@
     <nav aria-label="Paginación">
       <ul class="pagination pagination-lg justify-content-center">
         <li class="page-item">
-          <a class="page-link" (click)="updateIndex((startIndex/10)-1)" aria-label="Previous">
+          <a class="page-link" (click)="updateIndex((startIndex/12)-1)" aria-label="Previous">
             <span aria-hidden="true">&laquo;</span>
           </a>
         </li>

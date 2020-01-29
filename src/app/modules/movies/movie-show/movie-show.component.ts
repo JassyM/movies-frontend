@@ -13,6 +13,9 @@ export class MovieShowComponent implements OnInit {
   private id: string;
   public movie: Movie;
   public loading: boolean = false;
+  /*public strokeColor: any;
+  public dashoffset: number;
+  public loadingProgress: boolean = false;*/
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -25,6 +28,8 @@ export class MovieShowComponent implements OnInit {
       this.id = data[idkey];
     });
     this.getMovie(this.id);
+
+    //this.calculateProgress();
   }
 
   /**
@@ -37,8 +42,11 @@ export class MovieShowComponent implements OnInit {
     .subscribe(
       res => {
         this.movie = res;
-        this.loading = false;
         console.log(this.movie);
+        /*setTimeout(()=>{
+          this.calculateProgress(this.movie);
+        }, 3000);*/
+        this.loading = false;
       },
       error =>  {
         this.loading = false;
@@ -55,5 +63,19 @@ export class MovieShowComponent implements OnInit {
       this.getMovie(this.id);
     }
   }
+/*
+  public calculateProgress(movie: Movie) {
+    this.loadingProgress = true;
+    let score = Number.parseFloat(movie.score);
+    console.log("score: " + score);
+    let ptj = (5*30.815).toFixed(2);
+    this.dashoffset = Number.parseFloat(ptj);
+    if(score > 6.0) {
+      this.strokeColor = "rgb(108,185,124)";
+    } else {
+      this.strokeColor = "rgb(232, 98, 60)";
+    }
+    this.loadingProgress = false;
+  }*/
 
 }

@@ -15,7 +15,7 @@ export class MovieIndexComponent implements OnInit {
   loading: boolean = true;
   test: any;
   startIndex = 0;
-  endIndex = 10;
+  endIndex = 12;
 
   constructor(private movieService: MovieService) { }
 
@@ -56,8 +56,8 @@ export class MovieIndexComponent implements OnInit {
    */
   public updateIndex(pageIndex: number): void {
     if (pageIndex > -1) {
-      this.startIndex = pageIndex * 10;
-      this.endIndex = this.startIndex + 10;
+      this.startIndex = pageIndex * 12;
+      this.endIndex = this.startIndex + 12;
     }
   }
 

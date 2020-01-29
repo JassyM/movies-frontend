@@ -1,19 +1,43 @@
 <div class="container">
+  <h1 class="text-center p-4">
+    Películas SKRN
+  </h1>
   <div class="row justify-content-md-center">
-    <h4 *ngIf="loading">
-      Cargando...
-    </h4>
-    <div class="col-md-8" *ngIf="!loading">
+    <div class="pb-5 col-lg-10 col-md-10 col-sm-12">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a type="button" routerLinkActive="active" [routerLink]="['/']"  class="nav-link btn btn-success" title="Regresar a la página anterior.">
+            <i class="material-icons">reply</i> Regresar
+            <div class="ripple-container"></div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="d-flex justify-content-center col-md-8" *ngIf="loading">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Cargando...</span>
+      </div>
+    </div>
+    <div class="col-md-9" *ngIf="!loading">
       <div class="card mb-3 h-90 bg-white rounded-lg shadow text-center" *ngIf="movie != undefined; else noMovie">
         <div class="row no-gutters">
           <div class="col-md-4">
             <img src="{{ movie.cover }}" class="card-img p-3" alt="...">
           </div>
           <div class="col-md-8">
-            <div class="card-body">
-              <h2 class="card-title p-4">{{ movie.name }}</h2>
-              <p class="card-text">Género: {{movie.genre}}</p>
-              <p class="card-text">Puntuación: {{movie.score}}</p>
+            <div class="card-body row justify-content-md-center">
+              <h2 class="card-title col-md-12 p-4">{{ movie.name }}</h2>
+              <p class="card-text col-md-12">Género: {{movie.genre}}</p>
+              <p class="card-text col-md-12">Puntuación: {{movie.score}}</p>
+              <!-- <div class="col-md-12 card-text" *ngIf="strokeColor != null && dashoffset != null">
+                <svg height="100" width="100">
+                  <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="#eee"
+                    stroke-width="4" fill-opacity="0"></path>
+                  <path d="M 50,50 m 0,-48 a 48,48 0 1 1 0,96 a 48,48 0 1 1 0,-96" stroke="rgb(108,185,124)"
+                    stroke-width="4" fill-opacity="0" style="stroke-dasharray: 301.635, 301.635; stroke-dashoffset:{{dashoffset}};"></path>
+                </svg>
+                  <div class="progressbar-text" style="position: absolute; left: 50%; top: 85%; padding: 0px; margin: 0px; transform: translate(-50%, -50%); color: rgb(0, 0, 0); font-size: 1rem;">54</div>
+              </div> -->
               <div id="buttons">
                 <button href="#editMovie" data-target="#editMovie" class="btn btn-outline-success mr-1"
                 data-toggle="modal">Editar</button>
@@ -30,13 +54,13 @@
     </div>
   </div>
 </div>
-<div *ngIf="movie != undefined" class="modal fade" id="editMovie" data-backdrop="static" tabindex="-1" role="dialog" 
+<div *ngIf="movie != undefined" class="modal fade" id="editMovie" data-backdrop="static" tabindex="-1" role="dialog"
 aria-labelledby="editMovieLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <app-movie-edit [idMovie]="movie.id" (edited)="onEdited($event)"></app-movie-edit>
   </div>
 </div>
-<div *ngIf="movie != undefined" class="modal fade" id="deleteMovie" tabindex="-1" role="dialog" 
+<div *ngIf="movie != undefined" class="modal fade" id="deleteMovie" tabindex="-1" role="dialog"
 aria-labelledby="deleteMovieLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <app-movie-delete [idMovie]="movie.id"></app-movie-delete>
